@@ -1,0 +1,7 @@
+.controlItem {
+    display: inline-block;
+    
+    & + & {
+        margin-left: 8px;
+    }
+}
