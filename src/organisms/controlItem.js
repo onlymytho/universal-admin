@@ -10,21 +10,26 @@ class ControlItem extends Component {
     this.state = {
       isModalOpen: false, 
     }
+
+    // this._openModal = this._openModal.bind(this);
+    // this._closeModal = this._closeModal.bind(this);
   }
   
-  openModal = () => {
+  _openModal = () => {
     this.setState({ isModalOpen: true });
   }
 
-  closeModal = () => {
+  _closeModal = () => {
     this.setState({ isModalOpen: false }); 
   }
 
   render() {
     return (
         <div className="controlItem">
-            <Button onClick={this.openModal} innerText={this.props.name} />
-            <Modal isOpen={this.state.isModalOpen} close={this.closeModal} ><BrandAdd /></Modal>
+            <Button onClick={this._openModal} innerText={this.props.name} />
+            <Modal isOpen={this.state.isModalOpen} close={this._closeModal} >
+              <BrandAdd />
+            </Modal>
         </div>
     );
   }

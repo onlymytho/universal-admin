@@ -19,7 +19,7 @@ class App extends Component {
     return (
       <div className="App">
         <ListHeader>
-          <Title text={this.state.name} text="Brand"/>
+          <Title text="Brand"/>
         </ListHeader>        
         <ListController />
         <div className="listTableWrapper">

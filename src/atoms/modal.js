@@ -10,15 +10,22 @@ class Modal extends Component {
   
   render() {
     return (
-        <div className="ModalWrapper">
-          <div className="Modal-overlay" />
-          <div className="Modal">
-              <p className="title">{this.props.title}</p>
-              <div className="content">
-                  {this.props.children}
+      <div>
+        {
+          this.props.isOpen ?
+            <div className="ModalWrapper">
+              <div className="Modal-overlay" />
+              <div className="Modal">
+                  <p className="title">{this.props.title}</p>
+                  <div className="content">
+                      {this.props.children}
+                  </div>
               </div>
-          </div>
-        </div>
+            </div>
+          :
+          null
+        }
+      </div>
     );
   }
 }

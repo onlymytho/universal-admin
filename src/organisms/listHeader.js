@@ -10,7 +10,7 @@ class ListHeader extends Component {
   render() {
     return (
         <div className="listHeader">
-            {this.props.name}
+            {this.props.children}
         </div>
     );
   }

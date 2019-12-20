@@ -10,7 +10,7 @@ class Title extends Component {
   
   render() {
     return (
-        <title text={this.props.text} className="title">{this.props.childern}</title>
+        <div className="layoutTitle">{this.props.text}</div>
     );
   }
 }
