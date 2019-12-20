@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import logo from './logo.svg';
 import './App.scss';
+import Title from './atoms/title';
 import ListHeader from './organisms/listHeader';
 import ListController from './organisms/listController';
 import ListTable from './organisms/listTable';
@@ -17,7 +18,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <ListHeader name={this.state.name} />
+        <ListHeader>
+          <Title text={this.state.name} text="Brand"/>
+        </ListHeader>        
         <ListController />
         <div className="listTableWrapper">
           <ListTable />

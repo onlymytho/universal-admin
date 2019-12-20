@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import './atoms.scss'
+import BrandAdd from '../organisms/brandAdd'
 
 class Textarea extends Component {
   constructor(props) {

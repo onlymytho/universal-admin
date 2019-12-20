@@ -7,6 +7,7 @@ class Input extends Component {
     this.state = {
     };
   }
+  
   render() {
     return (
         <input
