@@ -5,14 +5,16 @@ class Modal extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      isOpen: this.props.isOpen,
     };
   }
   
   render() {
     return (
       <div>
+        {console.log(this.state.isOpen)}
         {
-          this.props.isOpen ?
+          this.state.isOpen ?
             <div className="ModalWrapper">
               <div className="Modal-overlay" />
               <div className="Modal">

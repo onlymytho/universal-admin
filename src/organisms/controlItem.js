@@ -1,21 +1,23 @@
 import React, {Component} from 'react';
 import './controlItem.scss';
 import Button from '../atoms/button'
-import Modal from '../atoms/modal'
+// import Modal from '../atoms/modal'
 import BrandAdd from './brandAdd'
+import Modal from 'react-modal';
 
 class ControlItem extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      isModalOpen: false, 
-    }
+      isModalOpen: false
+    };
 
-    // this._openModal = this._openModal.bind(this);
-    // this._closeModal = this._closeModal.bind(this);
+    this._openModal = this._openModal.bind(this);
+    this._closeModal = this._closeModal.bind(this);
   }
   
   _openModal = () => {
+    console.log('open')
     this.setState({ isModalOpen: true });
   }
 
@@ -26,7 +28,10 @@ class ControlItem extends Component {
   render() {
     return (
         <div className="controlItem">
-            <Button onClick={this._openModal} innerText={this.props.name} />
+            <Button
+              onClick={this._openModal}
+              innerText={this.props.name}
+            />
             <Modal isOpen={this.state.isModalOpen} close={this._closeModal} >
               <BrandAdd />
             </Modal>
