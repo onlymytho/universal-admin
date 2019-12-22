@@ -1,4 +1,5 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# universal-admin
+This project is built to admin tools blazingly.
 
 ## Get Started
 ```
@@ -6,4 +7,4 @@ npm install
 npm start
 ```
 
-# universal-admin
+
