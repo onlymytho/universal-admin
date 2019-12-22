@@ -1,13 +1,31 @@
-.inputText {
-    margin: 16px 0;
+.inputBox {
+    margin: 12px 0;
     width: 100%;
-    
+    display: flex;
+    align-items: fle-start;
+
     .inputLabel {
-        font-size: 14px;
-        display: block;
+        padding: 8px 0;
+        width: 25%;
+        font-size: 16px;
+        font-weight: 500;
     }
-    input {
-        display: block;
-        margin-top: 4px;
+    input, textarea, select {
+        padding: 8px 8px;
+        width: 100%;
+        outline-color: #c2c3c5;
+    }
+    textarea {
+        resize: vertical;
+        min-height: 5rem;
+    }
+    select {
+        font-size: 14px;
+
+        option {
+            // padding: 8px;
+        }
+        
     }
 }
+

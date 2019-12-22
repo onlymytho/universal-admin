@@ -15,9 +15,11 @@ class Input extends Component {
             name={this.props.name}
             placeholder={this.props.placeholder}
 
-            minLength={this.props.minlength}
-            maxLength={this.props.maxlength}
+            required={this.props.required}
+            minLength={this.props.minLength}
+            maxLength={this.props.maxLength}
             size={this.props.size}
+            accept={this.props.accept}
         >
         </input>
     );

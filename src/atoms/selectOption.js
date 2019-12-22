@@ -9,7 +9,7 @@ class SelectOption extends Component {
   }
   render() {
     return (
-        <option value={this.props.index}>{this.props.value}</option>
+        <option value={this.props.key}>{this.props.index}</option>
     );
   }
 }

@@ -11,6 +11,9 @@ button.button {
     &:hover {
         background-color: #eaecee;
     }
+    & + & {
+        margin-left: 8px;
+    }
 }
 
 div.layoutTitle {
@@ -20,9 +23,13 @@ div.layoutTitle {
     margin-bottom: 24px;
 }
 
-input {
+input, textarea {
     padding: 8px;
     font-size: 14px;
     border-radius: 4px;
     border: 1px solid #d5d7d9;
+}
+
+.requiredStar {
+    color: red;
 }

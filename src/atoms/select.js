@@ -9,11 +9,13 @@ class Select extends Component {
     };
   }
   render() {
+    const selectOptions = Array.from(this.props.options);
+
     return (
         <select
             name={this.props.name}>
-            {this.props.options.map((i, v) => {
-                return <SelectOption index={i} value={v}/>
+            {selectOptions.map((i, k) => {
+                return <SelectOption index={i} key={k}/>
             })}
         </select>
     );
