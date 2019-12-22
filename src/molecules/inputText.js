@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import Input from '../atoms/input'
-// import './inputText.scss'
+import './molecules.scss'
 
 class InputText extends Component {
   constructor(props) {
@@ -14,7 +14,12 @@ class InputText extends Component {
 
     return (
         <div className="inputText">
-            <label for={this.props.name} className="inputLabel">{this.props.label}</label>
+            <label
+              htmlFor={this.props.name}
+              className="inputLabel"
+            >
+              {this.props.label}
+            </label>
             <Input
                 type="text"
                 name={this.props.name}

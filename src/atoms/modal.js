@@ -1,23 +1,27 @@
 import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import './modal.scss'
+import Button from '../atoms/button';
+import { checkPropTypes } from 'prop-types';
 
 class Modal extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      isOpen: this.props.isOpen,
     };
   }
   
   render() {
     return (
       <div>
-        {console.log(this.state.isOpen)}
         {
-          this.state.isOpen ?
-            <div className="ModalWrapper">
-              <div className="Modal-overlay" />
-              <div className="Modal">
+          this.props.isOpen ?
+            <div className="modalWrapper">
+              <div
+                // onClick={this.props.close}
+                className="modal-overlay"
+              />
+              <div className="modal">
                   <p className="title">{this.props.title}</p>
                   <div className="content">
                       {this.props.children}

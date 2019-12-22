@@ -16,12 +16,13 @@ class BrandAdd extends Component {
         <div className="brandAdd">
           <Title text="Add Brand"/>
           <div>
-              <InputText />
-              <InputText />
-              <InputText />
-              <InputText />
-              <InputText />
-              <Button />
+              <InputText label="브랜드 이름" />
+              <InputText label="" />
+              <InputText label="" />
+              <InputText label="" />
+              <InputText label="" />
+              <Button elementType='button' innerText='Cancel' onClick={this.props.close} />
+              <Button elementType='button' innerText='Add' onClick={this.props.close} />
           </div>
         </div>
     );

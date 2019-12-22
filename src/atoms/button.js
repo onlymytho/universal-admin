@@ -7,12 +7,48 @@ class Button extends Component {
     this.state = {
     };
   }
+
+  
   render() {
-    return (
-        <button className={this.props.className}>
+    const className = 'button ' + this.props.className
+
+    switch (this.props.elementType) {
+      case 'link': {
+        return (
+          null
+          // <Link className={this.props.className}>
+          //   {props.children}
+          // </Link>
+        );
+      }
+  
+      case 'button': {  
+        return (
+          <button
+            type='button'
+            onClick={this.props.onClick}
+            className={className}
+          >
             {this.props.innerText}
-        </button>
-    );
+          </button>
+        );
+      }
+  
+      case 'anchor': {
+        return (
+          <a
+            href="#"
+            onClick={this.props.onClick}
+            className={className}
+          >
+            {this.props.innerText}
+          </a>
+        );
+      }
+  
+      default:
+        return null;
+    }
   }
 }
 
